@@ -3,27 +3,27 @@ var app           = express();
 
 var bodyParser    = require('body-parser');
 //var multer        = require('multer');
-var uuid          = require('node-uuid');
+var uuid          = require('uuid');
 // var passport      = require('passport');
 // var cookieParser  = require('cookie-parser');
 var session       = require('express-session');
 var mongoose      = require("mongoose");
 
-var mongodb = require("mongodb");
-var ObjectID = mongodb.ObjectID;
+// var mongodb = require("mongodb");
+// var ObjectID = mongodb.ObjectID;
 
 // setup a local connection string
-var connectionString = 'mongodb://127.0.0.1:27017/assignment';
+//var connectionString = 'mongodb://127.0.0.1:27017/assignment';
 
 // use remote connection string
 // if running in remote server
-if(process.env.MONGODB_URI) {
-    connectionString = MONGODB_URI
-}
+// if(process.env.MONGODB_URI) {
+//     connectionString = MONGODB_URI
+// }
 
 
 //connect to database
-var db = mongoose.connect(connectionString);
+var db = mongoose.connect(process.env.MONGOLAB_AMBER_URI);
 
 app.use(express.static(__dirname + '/public'));
 
