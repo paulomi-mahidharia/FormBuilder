@@ -4,8 +4,8 @@ var app           = express();
 var bodyParser    = require('body-parser');
 //var multer        = require('multer');
 var uuid          = require('uuid');
-// var passport      = require('passport');
-// var cookieParser  = require('cookie-parser');
+var passport      = require('passport');
+var cookieParser  = require('cookie-parser');
 var session       = require('express-session');
 var mongoose      = require("mongoose");
 
@@ -49,17 +49,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //app.use(multer());
 
-// app.use(session({
-//     resave: true,
-//     saveUninitialized: true,
-//     secret: process.env.PASSPORT_SECRET
-// }));
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: process.env.PASSPORT_SECRET
+}));
 
-// app.use(cookieParser());
+app.use(cookieParser());
 
-// app.use(passport.initialize());
-//
-// app.use(passport.session());
+app.use(passport.initialize());
+
+app.use(passport.session());
 
 
 //require("./public/assignment/server/app.js")(app, uuid, db, mongoose);
