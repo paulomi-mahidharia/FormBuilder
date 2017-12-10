@@ -1,0 +1,35 @@
+{
+  "name": "FormService",
+  "version": "1.0.0",
+  "description": "A MEAN app that allows users to create and manage forms.",
+  "keywords": [
+    "node",
+    "express",
+    "angular",
+    "MEAN",
+    "mongodb",
+    "REST",
+    "API"
+  ],
+  "author": {
+    "name": "Paulomi",
+    "email": "p.mahi257@gmail.com",
+    "url": "https://paulomi-mahidharia.github.io"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "express": "~3.4.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.10",
+    "node-uuid": "^1.4.7",
+    "q": "^1.4.1",
+    "uuid": "^3.1.0"
+  },
+  "private": true,
+  "main": "server.js"
+}
