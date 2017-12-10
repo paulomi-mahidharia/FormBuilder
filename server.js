@@ -25,7 +25,7 @@ var mongoose      = require("mongoose");
 //connect to database
 var db = mongoose.connect(process.env.MONGOLAB_AMBER_URI);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/client'));
 
 app.use(bodyParser.json());
 
