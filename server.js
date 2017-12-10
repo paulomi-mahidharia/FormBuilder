@@ -63,7 +63,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //require("./public/assignment/server/app.js")(app, uuid, db, mongoose);
-require("./public/project/server/app.js")(app, uuid, db, mongoose);
+require("./public/server/app.js")(app, uuid, db, mongoose);
 
 
 // var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
